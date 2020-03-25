@@ -1,38 +1,24 @@
 import React from 'react'
-import { Container,Button } from '@material-ui/core'
+import { Container, Button, Paper, Grid } from '@material-ui/core'
 import Mybar from './Mybar'
-import Background from '../img/backg.png'
+import Slider from './Slider'
+import Profile from './Profile'
+import Avatar from '@material-ui/core/Avatar';
 import Hasan from '../img/hasan.jpeg'
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+
+const useStyles = makeStyles(theme => ({
+  
+}))
 
 const Home = () => {
+    const classes = useStyles();
+
+
     return (
-        <div style={{ backgroundImage: `url(${Background})` }}>
-            <Container maxWidht="lg">
-                <Mybar></Mybar>
-                <Button>hasan</Button>
-                <Button>hasan</Button>
-                <Button>hasan</Button>
-                <Button>hasan</Button>
-                <Button>hasan</Button>
-                <Button>hasan</Button>
-                <Button>hasan</Button>
-                <Button>hasan</Button>
-                <Button>hasan</Button>
-                <Button>hasan</Button>
-                <Button>hasan</Button>
-                <Button>hasan</Button>
-                <Button>hasan</Button>
-                <Button>hasan</Button>
-                <Button>hasan</Button>
-                
-                
-                <img style={{height:300}}src={Hasan}></img>
-              
-          
-
-
-
-            </Container>
+        <div >
+            <Mybar></Mybar>
+            <Profile></Profile>
         </div>
     )
 }

@@ -1,89 +1,73 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
+import React from 'react'
+import {
+  Grid, Toolbar, Paper, IconButton, AppBar
+} from '@material-ui/core'
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import HomeIcon from '@material-ui/icons/Home';
 import MenuIcon from '@material-ui/icons/Menu';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import Switch from '@material-ui/core/Switch';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormGroup from '@material-ui/core/FormGroup';
-import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
-
+import {Button,Avatar} from '@material-ui/core'
+import { Link, Redirect } from 'react-router-dom'
+import history from '../history';
+import BeyazImza from '../img/beyazimza.png'
+import Hasan from '../img/hasan.jpeg'
 
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
+    alignItems: 'center'
   },
-  menuButton: {
-    marginRight: theme.spacing(2),
+  butons: {
+    marginLeft: 8,
+    color: '#FFFFFF',
+    fontFamily: 'Segoe UI'
   },
-  title: {
-    flexGrow: 1,
+  icons: {
+    color: '#FFFFFF'
+  },
+  bar: {
+    backgroundColor: '#313132',
+    height: '45px',
+    justifyContent: 'center'
+  },
+  logo: {
+    width: 200,
+    height: 40,
+   
   }
-}));
+}))
 
-const Mybar =()=> {
+function x() {
+  return <Redirect to="/signup"></Redirect>
+}
+const Mybar = () => {
   const classes = useStyles();
-  const [auth, setAuth] = React.useState(true);
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
-
-  const handleChange = event => {
-    setAuth(event.target.checked);
-  };
-
-  const handleMenu = event => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
   return (
-    <div className={classes.root}>
-      <AppBar elevation={0} position="static" color="transparent">
-        <Toolbar>
-          <Typography variant="h6" className={classes.title}>
-            Hasan Tunahan 
-          </Typography>
-          {auth && (
-            <div>
-              <IconButton
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                onClick={handleMenu}
-                color="inherit"
-              >
-                <AccountCircle />
-              </IconButton>
-              <Menu
-                id="menu-appbar"
-                anchorEl={anchorEl}
-                anchorOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                open={open}
-                onClose={handleClose}
-              >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
-              </Menu>
-            </div>
-          )}
+    <div>
+      <AppBar className={classes.bar} >
+        <Toolbar className={classes.root}>
+          <Button onClick={() => history.push('/login')} size="small" className={classes.butons} >Blog</Button>
+          <Button onClick={() => history.push('/login')} size="small" className={classes.butons} >Iletişim</Button>
+
+          <Grid
+            justify="center"
+            alignItems="center"
+            container
+          >
+
+            <img onClick={() => history.push('/')} className={classes.logo} src={BeyazImza} alt="not found"></img>
+            <Grid >
+
+
+            </Grid>
+          </Grid>
+
+          <Button onClick={() => history.push('/login')} size="small" className={classes.butons} >Giriş</Button>
+          <Button onClick={() => history.push('/signup')} size="small" className={classes.butons} >KayıtOl</Button>
+
+
         </Toolbar>
       </AppBar>
     </div>
-  );
+  )
 }
-export default Mybar;
+export default Mybar
