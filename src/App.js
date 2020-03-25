@@ -1,13 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Container, Grid } from '@material-ui/core'
+import Routes from './Routes'
 
-
-function App() {
+function App (){
   return (
-  <div>
-    hasan
-  </div>
+    <Routes></Routes>
   );
 }
 
