@@ -1,14 +1,14 @@
 import firebase from 'firebase'
 
 const config = {
-    apiKey: "AIzaSyB0mXziCV187uDT9PwYfQ09JEi-aAPWsdo",
-    authDomain: "hasantunahanak-60a48.firebaseapp.com",
-    databaseURL: "https://hasantunahanak-60a48.firebaseio.com",
-    projectId: "hasantunahanak-60a48",
-    storageBucket: "hasantunahanak-60a48.appspot.com",
-    messagingSenderId: "21442312443",
-    appId: "1:21442312443:web:843110a1d358baeb2b985e"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(config);
+  apiKey: "AIzaSyBM3R6w9Oj9lZjLW2E3cYRWEysUKsZJGoA",
+  authDomain: "hasantunahanakk.firebaseapp.com",
+  databaseURL: "https://hasantunahanakk.firebaseio.com",
+  projectId: "hasantunahanakk",
+  storageBucket: "hasantunahanakk.appspot.com",
+  messagingSenderId: "739467232643",
+  appId: "1:739467232643:web:8f49bf1454c38dc2b7e2b6"
+};
+// Initialize Firebase
+firebase.initializeApp(config);
   export default firebase;
