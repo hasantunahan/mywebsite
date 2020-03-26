@@ -36,17 +36,14 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-function x() {
-  return <Redirect to="/signup"></Redirect>
-}
 const Mybar = () => {
   const classes = useStyles();
   return (
     <div>
       <AppBar className={classes.bar} >
         <Toolbar className={classes.root}>
-          <Button onClick={() => history.push('/login')} size="small" className={classes.butons} >Blog</Button>
-          <Button onClick={() => history.push('/login')} size="small" className={classes.butons} >Iletişim</Button>
+          <Button onClick={() => history.push('/blog')} size="small" className={classes.butons} >Blog</Button>
+          <Button onClick={() => history.push('/iletisim')} size="small" className={classes.butons} >Iletişim</Button>
 
           <Grid
             justify="center"
