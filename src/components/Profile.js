@@ -13,7 +13,6 @@ import tbb from '../img/tbblogo.png'
 const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1,
-        marginTop: 55,
     },
     baslik: {
         fontWeight: 'bold',
@@ -71,6 +70,8 @@ const Profile = () => {
 
     return (
         <div >
+
+
             <Container maxWidth="sm">
                 <Paper elevation={0}>
                     <div className={classes.root}>
@@ -121,7 +122,7 @@ const Profile = () => {
 
                     </div>
                     <br></br>
-                    <Slider></Slider>
+
                 </Paper>
                 {/* <ul>
                     {
