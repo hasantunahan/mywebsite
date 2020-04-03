@@ -20,12 +20,12 @@ export const Home = () => {
         <p>Merhabalar</p>
         <p>Hakkımda</p>
       </section>
-      <section className={styles.button_group}>
+     {/*  <section className={styles.button_group}>
         <RoundButton text="My resume" target="nav_resume" />
         <RoundButton text="My works" target="nav_projects" />
         <RoundButton text="My skills" target="nav_resume" /> 
         
-      </section>
+      </section> */}
       <p className={styles.intro}>
         Web,Android geliştiricisi !
         <br />
