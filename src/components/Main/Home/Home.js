@@ -20,7 +20,7 @@ export const Home = () => {
           <Avatar style={{ marginTop: 50, width: 320, height: 320 }} src={Hasan}></Avatar>
         </div>
         <section className={styles.hello}>
-          <p>Merhabalar</p>
+          <p style={{marginTop:-20}}>Merhabalar</p>
         </section>
         {/*  <section className={styles.button_group}>
         <RoundButton text="My resume" target="nav_resume" />
@@ -28,8 +28,6 @@ export const Home = () => {
         <RoundButton text="My skills" target="nav_resume" /> 
         
       </section> */}
-
-
         <p>Hakkımda</p>
         <p className={styles.intro}>
           Web,Android geliştiricisi !
@@ -39,13 +37,13 @@ export const Home = () => {
         <br></br>
         <br></br>
         {<Grid
+          style={{marginLeft : -48}}
           alignItems="center"
           justify="center"
           container >
           {socialData["social"].map(a => (
             <HomeCard
               name={a.name}
-              link={a.link}
               img={a.img}
             ></HomeCard>
           ))}

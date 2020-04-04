@@ -3,12 +3,13 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import ins from '../../../assets/icon/instagram.svg'
+import InstagramIcon from '@material-ui/icons/Instagram';
+import Icon from './Icon'
 
 const useStyles = makeStyles({
     root: {
-        minWidth: 175,
-        maxWidth:175
+        minWidth: 90,
+        maxWidth:90
     },
     title: {
         fontSize: 14,
@@ -25,7 +26,7 @@ const HomeCard = ({name,link,img}) => {
         <Card 
         style={{margin:8}} spacing={3} className={classes.root}>
             <CardContent>
-                <img src={ins} alt={name}/>
+                <Icon name={name}></Icon>
                 <Typography variant="body2" component="p">
                     {name}
                 </Typography>
