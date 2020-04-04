@@ -1,20 +1,14 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import ins from '../../../assets/icon/instagram.svg'
 
 const useStyles = makeStyles({
     root: {
         minWidth: 175,
         maxWidth:175
-    },
-    bullet: {
-        display: 'inline-block',
-        margin: '0 2px',
-        transform: 'scale(0.8)',
     },
     title: {
         fontSize: 14,
@@ -24,22 +18,16 @@ const useStyles = makeStyles({
     },
 });
 
-const HomeCard = () => {
+const HomeCard = ({name,link,img}) => {
 
     const classes = useStyles();
     return (
-        <Card className={classes.root}>
+        <Card 
+        style={{margin:8}} spacing={3} className={classes.root}>
             <CardContent>
-                <Typography className={classes.title} color="textSecondary" gutterBottom>
-                    Word of the Day
-                 </Typography>
-                <Typography className={classes.pos} color="textSecondary">
-                    adjective
-                 </Typography>
+                <img src={ins} alt={name}/>
                 <Typography variant="body2" component="p">
-                    well meaning and kindly.
-                     <br />
-                    {'"a benevolent smile"'}
+                    {name}
                 </Typography>
             </CardContent>
         </Card>

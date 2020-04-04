@@ -2,17 +2,17 @@ export const socialmedia = {
     social :[
         {
             name: "İnstagram",
-            link: "",
+            link: "../../../assets/icon/instagram.svg",
             img: "https://i.ibb.co/dkxdYmv/turkiye-belediyeler-birligi-nden-yalan-haber-aciklamasi.jpg"
         },
         {
             name: "LinkedIn",
-            link: "",
+            link: "src/assets/icon/instagram.svg",
             img: "https://i.ibb.co/dkxdYmv/turkiye-belediyeler-birligi-nden-yalan-haber-aciklamasi.jpg"
         },
         {
             name: "GitHub",
-            link: "",
+            link: "../../../assets/icon/instagram.svg",
             img: "https://i.ibb.co/dkxdYmv/turkiye-belediyeler-birligi-nden-yalan-haber-aciklamasi.jpg"
         }
     ]
